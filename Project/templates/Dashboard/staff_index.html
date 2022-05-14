@@ -1,0 +1,54 @@
+{% load crispy_forms_tags %}
+<div>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    Upload File
+                </div>
+                <div class="card-body">
+                    <form method="POST" enctype="multipart/form-data" >
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <input class="btn btn-info btn-block" type="submit" value="Upload File">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    Uploaded Files
+                </div>
+                <div class="card-body">
+                    <table class="table bg-white">
+                        <thead class="bg-info text-white">
+                            <tr>
+                                <th scope="col">File Name</th>
+                                <th scope="col">Upload File</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Activity</th>
+                            </tr>
+                        </thead>
+                        <tbody>           
+                            {% for files in files_all %}
+                                    {% if files.user_specific == user %}
+                                                            
+                                            <tr>
+                                                <th> {{ files.file_name }} </th>
+                                                <th> {{ files.my_file }} </th>
+                                                <th> {{ files.date }} </th>
+                                                <td>
+                                                    <a class="btn btn-primary btn-sm" href="{% url 'd-staff-edit' files.ids %}">Edit</a>
+                                                    <a class="btn btn-danger  btn-sm" href="{% url 'd-staff-delete' files.ids %}">Delete</a>
+                                                </td>  
+                                            </tr>           
+                                    {% endif %}  
+                            {% endfor %}   
+                        </tbody>
+                    </table>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>

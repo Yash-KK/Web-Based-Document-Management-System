@@ -1,0 +1,42 @@
+{% extends 'partials/base.html' %}
+{% block "title" %}Staff Page{% endblock "title" %}
+
+
+{% block "content" %}
+{% include "partials/topside.html" %}
+   <!--Tables-->
+   <div class="container">
+    <div class="row mt-4">
+        <div class="col-md-4">  </div>         
+        
+        <div class="col-md-8">
+           <table class="table bg-white">
+               <thead class="bg-info">
+                 <tr>
+                   <th scope="col">#</th>
+                   <th scope="col">Name</th>
+                   <th scope="col">Phone</th>
+                   {% comment %} <th scope="col">Handle</th> {% endcomment %}
+                 </tr>
+              </thead>
+               <tbody>
+                    {% for p in User %}
+                                   
+                      <tr>
+                        <th scope="row"> <a class="btn btn-info btn-sm" href="">View</a></th>
+                        <td> {{ p.staff.username }} </td>
+                        <td> {{ p.phone }} </td>
+                        {% comment %} <td>@mdo</td> {% endcomment %}
+                      </tr>   
+                      {% endfor %}     
+                           
+                </tbody>
+             </table>   
+        </div>
+    </div>
+   
+</div>
+<!--End Tables--> 
+
+
+{% endblock "content" %}

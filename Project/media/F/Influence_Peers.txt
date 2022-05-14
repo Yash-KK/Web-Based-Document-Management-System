@@ -1,0 +1,26 @@
+I Myself am a Motivated Engineer and I always felt inspired by Many Influential People Like Linus torvalds, Vitalik Buterin and CEO's of most of the Large Cap Companies like Microsoft and Google as they were born and bought up in India especially Satya Nadella as he was also born in Hyderabad. Therefore, i was always
+attracted towards technology as a child and I used to meddle with every electronic gadgets in my house just out of curiosity. 
+When it comes to Technology, i love to debate with my peers and seniors and it induces a lot of perspective.
+
+As a Freshmen, Web Development is one of my favourite Topics because of the Following:
+A Web Developer is Versatile as he is conversant with both Front-End and Back-end and the in-depth knowledge of both the domains makes a Web Developer revelant
+in the long run. In my Process of Learning, I always try to share my knowledge with others like my Classmates in College	and learning with peers like this is the fastest way to learn
+and it also allows us to apply whatever we have learnt in the Real World.
+For Example:
+ My Mother is a School Teacher and during LockDown, it was very challenging for my Mother to Manage Online Classes.
+One of her Work was to convert all the Images of Student's Answer Sheets into PDF's,merge them and also apply School WaterMark
+and that was Hectic as there were 100's of Students but because of learning with peers, I got to know about PILLOW and PyPDF2 Libraries of Python
+and created a Program that takes a Folder containing all images and converts all the images into PDF's Followed by WaterMark.
+I helped my Mother and My Mother also shared this with her friends and that inspired a Lot of her Friend's Children to try their hands on Programming.
+
+
+In My College, I also am a Part of a Coding Club in My College which is a Group of Like Minded People dedicated towards increasing the Participation of College Mates
+in Tech. I am Serving as an Active and a Responsible Member in The Coding Club and Spread Awareness About the Importance of Data Structues- Algoritms and Remote Jobs.
+For Now, i have taught Linear and Binary Search to many of my Friends here and pointed out to some leetcode questions like "Peak Index in Mountain Array",
+"Guess Number Higher or Lower" so that they practice and get the hang of it.
+I always try to Motivate my Family and Society Neighbours whenever we have a discussion or debate (At PResent,Ethereum is a Trending Topic) on Technology
+
+I eagerly Wish to be a Part of the MSLA Program to Learn and Contribute more towards the transformation of Billions of Lives
+	
+		 
+	

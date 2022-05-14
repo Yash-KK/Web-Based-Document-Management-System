@@ -1,0 +1,28 @@
+{% extends 'partials/base.html' %}
+{% block "title" %}
+    Login Page
+{% endblock "title" %}
+
+{% block "content" %}
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-6 offset-2">
+                <form method="POST" >
+                    {% csrf_token %}
+                    <div class="form-group">
+                      <label for="exampleInputEmail1"><strong>UserName:</strong> </label>
+                      <input type="text" class="form-control" name="username" aria-describedby="emailHelp">
+                      {% comment %} <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> {% endcomment %}
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1"><strong>Password:</strong> </label>
+                      <input type="password" class="form-control" name="password">
+                    </div>            
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+            </div>
+        </div>        
+    </div>
+{% endblock "content" %}
+
+ 

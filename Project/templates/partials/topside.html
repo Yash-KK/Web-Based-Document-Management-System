@@ -1,0 +1,54 @@
+ <!--Top Side--> 
+ <div class="container">
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card">
+                    <div class="card-header bg-info text-white">
+                        Information
+                    </div>
+                    <div class="card-body " >
+                        <marquee behavior="" direction="">
+                            <h3 class="my-4">Document Management</h3>
+                        </marquee>
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card">
+                    <div class="card-header bg-info text-white">
+                        Statistics                      
+                 
+                    </div>
+                    <div class="card-body" > 
+                        <div class="row ">
+                            <div class="col-md-4">
+                                <a class="text-decoration-none text-dark" href="{% url 'd-staff' %}">
+                                    <div class="card my-card shadow text-center p-3" >
+                                        <h4>Staff</h4>
+                                        <h4> {{ count_s }} </h4>
+                                    </div>  
+                                </a>
+                            </div>
+                            <div class="col-md-4">
+                                <a class="text-decoration-none text-dark" href="{% url 'd-products' %}">
+                                    <div class="card my-card shadow text-center p-3" >
+                                        <h4>Num Files</h4>
+                                        <h4> {{ count_p }}  </h4>
+                                    </div>  
+                                </a>
+                            </div>
+                            <div class="col-md-4">
+                                <a class="text-decoration-none text-dark" href="{% url 'd-orders' %}">
+                                    <div class="card my-card shadow text-center p-3" >
+                                        <h4>Updates</h4>
+                                        <h4>{{ count_up }}</h4>
+                                    </div>  
+                                </a>
+                            </div>
+                        </div>                       
+                    </div>
+            </div>
+        </div>      
+    </div>
+ </div>
+ <!--End TopSide-->

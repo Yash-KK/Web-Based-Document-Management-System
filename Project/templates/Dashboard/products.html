@@ -1,0 +1,74 @@
+{% extends 'partials/base.html' %}
+{% load crispy_forms_tags %}
+{% block "title" %}File Upload{% endblock "title" %}
+
+{% block "content" %}
+{% include "partials/topside.html" %} 
+       <!--Tables-->    
+        <div class="container">
+        <div class="row mt-4">
+            <div class="col-md-4">     
+              {% for message in messages %}
+                <div class="alert alert-success d-flex align-items-center" role="alert">
+                  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                  <div>
+                    {{ message }}
+                  </div>
+                </div>
+              {% endfor %}           
+               <div class="border bg-white p-3">
+                   <h1>Upload Files</h1>
+                   <hr>
+                   <form method="POST" enctype="multipart/form-data" >
+                     {% csrf_token %}  
+                            
+                       {{ form|crispy }}                                    
+                        
+                       <input class="btn btn-success btn-block " type="submit" value="Add Product">
+                   </form>
+               </div>            
+           </div>         
+            
+           <div class="col-md-8">
+               <table class="table bg-white">
+                   <thead class="bg-info">
+                     <tr>
+                       {% comment %} <th scope="col">#</th> {% endcomment %}
+                       <th scope="col">File Name</th>
+                       <th scope="col">The File</th>
+                       <th scope="col">Date</th>
+                       <th scope="col">Update</th>
+                       <th scope="col">Activity</th>
+                     </tr>
+                   </thead>
+                   <tbody>
+                     {% for file in files %}                          
+                         {% if file.user_specific == user %}
+                                                           
+                          <tr>
+                            {% comment %} <th scope="row">{{ file.ids }}</th> {% endcomment %}
+                            <th> {{ file.file_name }} </th>
+                            <th><a download href="{{ file.my_file.url }}">{{ file.my_file }}</a></th>                       
+                            <th> {{ file.date }} </th>
+                            <th> {{ file.updated }} </th>
+                            <td> 
+                                <a class="btn btn-primary btn-sm" href="{% url 'd-edit' file.ids %}">Edit</a>
+                                <a class="btn btn-danger  btn-sm" href="{% url 'd-delete' file.ids %}">Delete</a>
+                            </td>     
+                          </tr>  
+
+                          {% endif %}   
+                         
+                         
+                       {% endfor %}                
+                    
+                   </tbody>
+                 </table>   
+            </div>
+           </div>
+       
+    </div>
+   <!--End Tables--> 
+
+{% endblock "content" %}
+

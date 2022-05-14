@@ -1,0 +1,45 @@
+{% extends 'partials/base.html' %}
+
+{% block "title" %}Orders Page{% endblock "title" %}
+
+{% block "content" %}
+{% include "partials/topside.html" %}
+      <!--Tables-->
+      <div class="container">
+        <div class="row mt-4">
+            <div class="col-md-4">                    
+           </div>          
+            
+           <div class="col-md-8">
+               <table class="table bg-white">
+                   <thead class="bg-info">
+                     <tr>
+                       <th scope="col">#</th>
+                       <th scope="col">Name</th>
+                       <th scope="col">Detail</th>
+                       <th scope="col">Time</th>
+                      
+                     </tr>
+                   </thead>
+                   <tbody>
+                     {% for up in updates %}
+                     
+                        <tr>
+                          <th scope="row">{{ up.id }} </th>
+                          <td> {{ up.name }} </td>
+                          <td> {{ up.upload }} </td>
+                          <td> {{ up.date }} </td>
+
+
+                      {% endfor %}  
+                     </tr>                    
+                   </tbody>
+                 </table>   
+            </div>
+           </div>
+       
+    </div>
+   <!--End Tables--> 
+
+{% endblock "content" %}
+
